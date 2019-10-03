@@ -4,9 +4,7 @@
 # ~~~~
 
 # An example controller showing a sample home page
- GET    /                           controllers.PersonController.index
-
- POST   /deneme                     controllers.PersonController.deneme
+ GET    /people                           controllers.PersonController.getAll
 
  POST   /person                     controllers.PersonController.addPerson
  POST   /person/:personId           controllers.PersonController.updatePerson(personId: Long)

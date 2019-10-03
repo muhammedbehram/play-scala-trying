@@ -13,7 +13,7 @@ import scala.concurrent.{ExecutionContext, Future}
 @Singleton
 class PersonController @Inject()(cc: ControllerComponents,personService: PersonService)(implicit ec: ExecutionContext) extends AbstractController(cc) {
 
-  def index() = Action.async { implicit request: Request[AnyContent] =>
+  def getAll() = Action.async { implicit request: Request[AnyContent] =>
     personService.list().map{
       people => Ok(Json.toJson(people))
     }
@@ -41,7 +41,6 @@ class PersonController @Inject()(cc: ControllerComponents,personService: PersonS
       )
     )
   }
-  def 
 
 
 }
